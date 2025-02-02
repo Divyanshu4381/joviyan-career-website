@@ -97,6 +97,15 @@ wheels = [
 ]
 
 [[package]]
+name = "templates"
+version = "0.0.5"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/59/ab/652b095810cca1e2da1c97638c91e654462a83c838c264ca409378bc0bd9/templates-0.0.5.tar.gz", hash = "sha256:3465eb4cb0d43f236178b123b9a6005c7b78415c7bc65c7fb5568bf6bf4dc8cf", size = 72776 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/39/91/0fc9774f514285a8fafc5a43715e3027997ccea60886faae28052c4fb0ff/templates-0.0.5-py2.py3-none-any.whl", hash = "sha256:5a0e00ee4884d5c1419afb3821437a3e3a849c7c12523886a15eb90e5d5ad20e", size = 73544 },
+]
+
+[[package]]
 name = "werkzeug"
 version = "3.1.3"
 source = { registry = "https://pypi.org/simple" }
@@ -114,7 +123,11 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "flask" },
+    { name = "templates" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "flask", specifier = "==3.1.0" }]
+requires-dist = [
+    { name = "flask", specifier = "==3.1.0" },
+    { name = "templates", specifier = ">=0.0.5" },
+]
